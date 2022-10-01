@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/jade
+server:
+  port: 9030
+  servlet:
+    context-path: /mongo
