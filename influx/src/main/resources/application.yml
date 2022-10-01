@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  influxdb:
+    url:
+    username:
+    password:
+    write-timeout: 10
+    read-timeout: 30
+    gzip: true
+    connect-timeout: 10
+    retention-policy:
+    database1:
+    database2:
