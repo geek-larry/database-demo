@@ -1,0 +1,47 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /es-api
+
+# elasticsearch
+elastic:
+  host: 127.0.0.1
+  port: 9200
+
+# mysql
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/es_data?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 180000
+      connection-timeout: 30000
+      connection-test-query: select 1
+
+# canal
+canal:
+  host: 192.168.219.115
+  port: 11111
+  destination: es_data
+  username: canal
+  password: canal
+
+# kafka
+kafka:
+  bootstrap:
+    servers: 127.0.0.1:9092
+  request:
+    timeout:
+      ms: 3000
+
+# hotel
+hotel:
+  topic: hotel_suggest
