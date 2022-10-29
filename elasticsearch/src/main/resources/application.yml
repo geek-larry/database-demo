@@ -1,0 +1,5 @@
+spring:
+  elasticsearch:
+    connection-timeout: 30
+    uris: http://localhost:9200
+
